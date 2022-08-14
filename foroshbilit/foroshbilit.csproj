@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3706C1A9-AF2F-462C-9D5D-2DA6AF3ED598}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>foroshbilit</RootNamespace>
+    <AssemblyName>foroshbilit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Pelfusion-Folded-Flat-Air-Plane.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.1.9, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.9\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDateTimeControl, Version=1400.5.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PersianDateTimeControl.2.0.1\lib\net20\PersianDateTimeControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addandeditpersonels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addandeditpersonels.Designer.cs">
+      <DependentUpon>addandeditpersonels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factors.Designer.cs">
+      <DependentUpon>Factors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoAboutProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoAboutProgram.Designer.cs">
+      <DependentUpon>InfoAboutProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sqlcon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sqlcon.Designer.cs">
+      <DependentUpon>sqlcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transferCU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transferCU.Designer.cs">
+      <DependentUpon>transferCU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginpersonels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginpersonels.Designer.cs">
+      <DependentUpon>loginpersonels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainform.Designer.cs">
+      <DependentUpon>mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="personelsCRud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="personelsCRud.Designer.cs">
+      <DependentUpon>personelsCRud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="selecteditpassengers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selecteditpassengers.Designer.cs">
+      <DependentUpon>selecteditpassengers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transferform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transferform.designer.cs">
+      <DependentUpon>transferform.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addandeditpersonels.resx">
+      <DependentUpon>addandeditpersonels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factors.resx">
+      <DependentUpon>Factors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoAboutProgram.resx">
+      <DependentUpon>InfoAboutProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginpersonels.resx">
+      <DependentUpon>loginpersonels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform.resx">
+      <DependentUpon>mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="personelsCRud.resx">
+      <DependentUpon>personelsCRud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selecteditpassengers.resx">
+      <DependentUpon>selecteditpassengers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sqlcon.resx">
+      <DependentUpon>sqlcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transferform.resx">
+      <DependentUpon>transferform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transferCU.resx">
+      <DependentUpon>transferCU.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Content\bootstrap-theme.css.map" />
+    <None Include="Content\bootstrap.css.map" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Scripts\jquery-1.9.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE_azhans\BE_azhans.csproj">
+      <Project>{89906ec1-9899-4a1e-9e4c-68eb926a9d97}</Project>
+      <Name>BE_azhans</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL_azhans\BLL_azhans.csproj">
+      <Project>{7baebba6-4918-485c-9986-fc99427e47cf}</Project>
+      <Name>BLL_azhans</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sign-in-form-password-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sign-in-form-password-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-test-account-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-travel-card-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-traveler-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-traveler-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-username-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-username-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Travel-Suitcase.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass-search %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteairplane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whitebus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteinternationalairplane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whitetrain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worldwide %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airplaneblack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login airplane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exchange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high-speed-train.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfer-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfer black-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-airport-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-combi-ticket-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-combi-ticket-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-combi-ticket-901.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-combo-chart-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dashboard-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dashboard-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dashboard-901.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-901.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hotel-building-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hotel-star-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hotel-star-901.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-identification-documents-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-identification-documents-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-macos-close-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-macos-close-901.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-macos-minimize-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-queue-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refresh.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reserve-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plane-s.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\train.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\train2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airolane.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airplane.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disk %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\url %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\url.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pelfusion-Folded-Flat-Air-Plane.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Pelfusion-Folded-Flat-Air-Plane.ico" />
+    <None Include="Resources\calendar %282%29.png" />
+    <None Include="Resources\calendar %283%29.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.0.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\npm.js" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\check %281%29.png" />
+    <None Include="Resources\plane-ticket %281%29.png" />
+    <None Include="Resources\plane-ticket.png" />
+    <None Include="Resources\movie-tickets.png" />
+    <None Include="Resources\movie-tickets %281%29.png" />
+    <None Include="Resources\receipt.png" />
+    <None Include="Resources\receipt %281%29.png" />
+    <None Include="Resources\instagram.png" />
+    <None Include="Resources\whatsapp.png" />
+    <None Include="Resources\telegram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
